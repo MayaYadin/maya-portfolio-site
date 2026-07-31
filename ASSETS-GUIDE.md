@@ -7,7 +7,6 @@ The site code already expects your real photos, videos and PDF at the exact path
 - - career-hero-bg.png — Startup Career OS hero background (sky/city photo)
   - - via-preview.png — the Via app preview shown in the "Product & Brand" section on the Home page
     - - strategy-dashboard.png — the "indexa" dashboard mockup in the "Strategy & Systems" section
-      - - career-dashboard.png — the dashboard mockup in the Career OS "Execution" tab
         - - desk-microsoft.png — "Brand & comms" square in "Also on my desk"
           - - desk-mashkiot.png — "Building a community's voice" square in "Also on my desk"
             - - desk-earlier.png — "Before we had AI" square in "Also on my desk"

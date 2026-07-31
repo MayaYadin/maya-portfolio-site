@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initTabs();
       initCarousel();
         initNavToggle();
+  initClickUnmute();
         });
 
         /* ---------- Scroll reveal animations ---------- */
@@ -94,3 +95,14 @@ document.addEventListener('DOMContentLoaded', () => {
                                                                                                                                                                                                                                                   });
                                                                                                                                                                                                                                                   }
                                                                                                                                                                                                                                                   
+
+
+/* ---------- Click-to-unmute for standalone videos (e.g. Via page phone mockup) ---------- */
+function initClickUnmute() {
+  const vids = document.querySelectorAll('video.click-unmute');
+  vids.forEach(video => {
+    video.addEventListener('click', () => {
+      video.muted = !video.muted;
+    });
+  });
+}

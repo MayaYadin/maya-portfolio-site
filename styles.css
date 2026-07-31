@@ -200,7 +200,7 @@ p { margin: 0; line-height: 1.6; }
     border-radius: 32px;
     padding: 60px 30px;
     text-align: center;
-    background: radial-gradient(circle at 50% 35%, rgba(0,194,255,.55), rgba(0,194,255,0) 65%), var(--white);
+    background: url('assets/images/via-blue-glow.svg') center / cover no-repeat, var(--white);
 }
 .via-card img.logo-mark { width: 180px; margin: 0 auto 8px; }
 .via-card .tagline { font-family: var(--font-via-heading); font-size: 18px; color: var(--via-text); }

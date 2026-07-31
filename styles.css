@@ -414,6 +414,7 @@ p { margin: 0; line-height: 1.6; }
 .mosaic { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .mosaic img { border-radius: 14px; width: 100%; height: 260px; object-fit: cover; }
 .mosaic .tall { grid-row: span 2; height: 100%; }
+.work-subhead { text-align: center; font-size: 22px; margin: 50px auto 20px; max-width: 640px; }
 
 /* ===================== Responsive ===================== */
 @media (max-width: 900px) {

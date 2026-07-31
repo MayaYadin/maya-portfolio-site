@@ -284,6 +284,7 @@ p { margin: 0; line-height: 1.6; }
 .desk-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,.15); }
 .desk-card h3 { font-size: 19px; text-decoration: underline; margin-bottom: 10px; }
 .desk-card span { font-size: 14px; opacity: .7; }
+.desk-card .desk-teaser { font-family: var(--font-body); font-size: 14px; line-height: 1.5; opacity: .75; margin-bottom: 16px; }
 
 /* ===================== How I actually work ===================== */
 .work-grid {
@@ -365,7 +366,7 @@ p { margin: 0; line-height: 1.6; }
 .phone-mock::before {
     content: "";
     position: absolute; inset: 0;
-    background: radial-gradient(circle at 50% 45%, rgba(0,194,255,.65), rgba(0,194,255,0) 70%);
+    background: url('assets/images/via-blue-glow.svg') center / cover no-repeat;
 }
 .phone-mock video, .phone-mock img { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: cover; }
 

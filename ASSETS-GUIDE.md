@@ -1,30 +1,39 @@
 # Asset file guide
 
-The site code already expects your real photos, videos and PDF at the exact paths below. Rename your files on your computer to match these names exactly (same spelling, same lowercase, same extension), then upload them into these folders in GitHub. A full step-by-step for uploading is at the bottom of this file.
+The site code already expects your real photos, videos and PDF at the exact paths below. Rename your files on your computer to match these names exactly (same spelling, same capitalization, same extension), then upload them into these folders in GitHub. A full step-by-step for uploading is at the bottom of this file.
 
-## assets/images/ (all .png, except the glow graphic which is .svg)
+Note: a few filenames below include spaces or capital letters (e.g. "take a brief1.png", "TechTrain Mailer.png") — that's fine, GitHub handles spaces in filenames just fine, just make sure the name you upload matches exactly, including the spaces and capitalization.
+
+## assets/images/ (all .png, except two noted below)
 - hero-bg.png — Home page hero background (beach chair photo)
 - career-hero-bg.png — Startup Career OS hero background (sky/city photo)
 - via-preview.png — the Via app preview shown in the "Product & Brand" section on the Home page
 - strategy-dashboard.png — the "indexa" dashboard mockup in the "Strategy & Systems" section
-- via-phone-mock.png — Via page phone mockup (used twice: hero + "the how")
-- via-what-if.png — Via page "what if" photo card
-- via-clicked.png — Via page "and suddenly it clicked" photo card
-- via-blue-glow.svg — the soft blue glow graphic behind the Via page phone mockup
-- mw-microsoft-1.png, mw-microsoft-2.png, mw-microsoft-3.png — More Work Microsoft section (lecture series / dogs at campus / mental health campaign)
-- mw-mashkiot-1.png, mw-mashkiot-2.png, mw-mashkiot-3.png — More Work Mashkiot section (Hebrew real-estate posts)
-- mw-earlier-1.png, mw-earlier-2.png, mw-earlier-3.png — More Work "Before we had AI" section (SpaceClub gym content)
+- via-what-if.png — Via page "the who" media grid, photo card 1
+- via-clicked.png — Via page "the who" media grid, photo card 2
+- we-met-via.png — Via page "the who" media grid, photo card 3
+- via-note.png — Via page "the who" media grid, photo card 4
+- via-login.png — Via page phone mockup in "the how" section
+- via-blue-glow.svg — the soft blue glow graphic behind both Via page phone mockups (this one is .svg, not .png)
+- take a brief1.png, take a brief2.png, take a brief3.png — More Work page, Microsoft "Brand & communications", Take a Brief lecture series
+- dogs1_V.png, dogs2_V.png, dogs3_V.png — More Work page, Microsoft "Brand & communications", dogs at campus campaign
+- offsider article.jpg — More Work page, Microsoft "Technical writing" (this one is .jpg, not .png)
+- TechTrain Mailer.png, Managers Mailer.png, Aspire mailer.png — More Work page, Microsoft "Technical writing" mailers
+- Website Mental Health Intro.png, physical1.png, physical2.png, physical3.png — More Work page, Microsoft "Physical Campaigns"
+- mw-mashkiot-1.png, mw-mashkiot-2.png, mw-mashkiot-3.png — More Work page, Mashkiot section (Hebrew real-estate posts)
+- mw-earlier-1.png, mw-earlier-2.png, mw-earlier-3.png, space-feed.png — More Work page, "Before we had AI" section (SpaceClub gym content)
 
-Note: the three "Also on my desk" squares (Brand & comms / Building a community's voice / Before we had AI) no longer use image files — they're now live text teasers you can edit directly in index.html, so desk-microsoft.png, desk-mashkiot.png and desk-earlier.png are not needed anymore.
+Note: the three "Also on my desk" squares on the Home page (Brand & comms / Building a community's voice / Before we had AI) no longer use image files — they're now live text teasers you can edit directly in index.html.
 
 ## assets/videos/
 - reel-1.mp4 through reel-7.mp4 — the 7 videos in the Home page vertical carousel ("Content & Self-Branding" section). Vertical/portrait (9:16) video works best. Keep file sizes reasonably small (a few MB each) so the page loads fast.
+- via-annimated.mp4 — Via page hero phone mockup (plays automatically, muted and looping — visitors can click it to unmute)
 
 ## assets/documents/
 - Maya-Yadin-CV.pdf — used by both the "Download CV as PDF" button on the Home page and the CV page
 
 ## Notes
-- If a file is missing, that spot on the page will just show a blank/broken image icon until you upload it — nothing else will break.
+- If a file is missing, that spot on the page will just show a blank/broken image icon (or a blank video box) until you upload it — nothing else will break.
 
 ---
 

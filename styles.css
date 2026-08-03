@@ -340,6 +340,13 @@ p { margin: 0; line-height: 1.6; }
 .company-types { display: flex; gap: 24px; margin-top: 30px; flex-wrap: wrap; }
 .company-types .pill { border: 1px solid var(--cream); border-radius: 20px; padding: 22px 30px; text-align: center; }
 .company-types .pill .big { font-size: 30px; font-weight: 700; display:block; }
+.company-types-grid { display: flex; gap: 24px; flex-wrap: wrap; }
+.pipeline-workflow { margin: 30px 0; max-width: 700px; }
+.pipeline-workflow h3 { font-size: 18px; margin-bottom: 10px; }
+.pipeline-workflow p { font-size: 14px; opacity: .85; }
+.outreach-list-wrap { margin-top: 30px; max-width: 500px; }
+.outreach-list-wrap h3 { font-size: 18px; margin-bottom: 10px; }
+.dashboard-table-wrap { margin-top: 30px; overflow-x: auto; }
 
 .thinking-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
 .thinking-card { border: 1px solid rgba(249,255,215,.5); border-radius: 18px; padding: 28px; }

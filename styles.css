@@ -167,7 +167,7 @@ p { margin: 0; line-height: 1.6; }
 @keyframes scrollDot { 0%{ transform: translateY(0); opacity:1;} 70%{ transform: translateY(14px); opacity:0;} 100%{opacity:0;} }
 
 /* ===================== SECTION base ===================== */
-.section { padding: var(--section-pad) 0; position: relative; }
+.section { padding: var(--section-pad) clamp(24px, 6vw, 64px); position: relative; }
 .section-lavender { background: var(--lavender); color: var(--black); }
 .section-indigo { background: var(--indigo); color: var(--cream); }
 .section-navy { background: var(--navy); color: var(--cream); }
@@ -359,6 +359,48 @@ p { margin: 0; line-height: 1.6; }
 .stat-box .label { font-size: 12px; opacity: .75; }
 .outreach-list li { display: flex; justify-content: space-between; font-size: 13px; padding: 6px 0; border-bottom: 1px solid rgba(249,255,215,.15); }
 
+/* ===================== Brief headline (career-os.html) ===================== */
+.brief-eyebrow { font-family: var(--font-heading); font-style: italic; font-weight: 500; font-size: clamp(22px, 3vw, 32px); margin-bottom: 6px; }
+.brief-headline { font-family: var(--font-body); font-size: clamp(30px, 4.2vw, 44px); font-weight: 700; margin-bottom: 30px; max-width: 700px; }
+
+/* ===================== Execution dashboard (career-os.html) ===================== */
+.exec-layout { display: grid; grid-template-columns: 260px 1fr 300px; gap: 28px; align-items: start; margin-top: 10px; }
+.exec-middle { display: flex; flex-direction: column; gap: 20px; }
+.exec-right { display: flex; flex-direction: column; gap: 20px; }
+.exec-stats-card { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid rgba(249,255,215,.3); border-radius: 18px; background: rgba(255,255,255,.05); overflow: hidden; }
+.exec-stat { padding: 20px 22px; border-right: 1px solid rgba(249,255,215,.2); border-bottom: 1px solid rgba(249,255,215,.2); }
+.exec-stat:nth-child(2) { border-right: none; }
+.exec-stat:nth-child(3), .exec-stat:nth-child(4) { border-bottom: none; }
+.exec-stat-label { font-size: 13px; font-weight: 600; margin-bottom: 10px; opacity: .95; }
+.exec-stat-num { font-size: 30px; font-weight: 700; display: block; }
+.exec-stat-sub { font-size: 11px; opacity: .65; margin-top: 2px; }
+.exec-split-row { display: flex; gap: 26px; margin-top: 8px; }
+.exec-split-label { font-size: 11px; opacity: .65; display: block; }
+.exec-split-num { font-size: 22px; font-weight: 700; display: block; }
+.pipeline-focus-card { border: 1px solid rgba(249,255,215,.3); border-radius: 18px; background: rgba(255,255,255,.05); padding: 20px 24px; }
+.pipeline-focus-title { font-size: 14px; font-weight: 600; margin-bottom: 14px; }
+.donut-row { display: flex; align-items: center; gap: 18px; }
+.donut-chart { width: 84px; height: 84px; border-radius: 50%; background: conic-gradient(var(--cream) var(--pct, 25%), rgba(249,255,215,.15) 0); position: relative; flex-shrink: 0; }
+.donut-chart::before { content: ""; position: absolute; inset: 13px; border-radius: 50%; background: var(--navy); }
+.donut-caption { font-size: 12px; opacity: .8; max-width: 180px; }
+.capital-card { border: 1px solid rgba(249,255,215,.3); border-radius: 18px; background: rgba(255,255,255,.05); padding: 20px 24px; }
+.capital-label { font-size: 14px; font-weight: 600; margin-bottom: 10px; }
+.capital-num { font-size: 30px; font-weight: 700; display: block; }
+.capital-sub { font-size: 12px; opacity: .7; margin-top: 4px; }
+.reach-out-card { border: 1px solid rgba(249,255,215,.5); border-radius: 18px; padding: 20px 24px; }
+.reach-out-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 14px; }
+.reach-out-card .outreach-list li { display: flex; align-items: flex-start; gap: 12px; justify-content: flex-start; border-bottom: 1px solid rgba(249,255,215,.15); padding: 10px 0; }
+.reach-out-card .outreach-list li:last-child { border-bottom: none; }
+.outreach-check { width: 16px; height: 16px; border: 1.5px solid var(--cream); border-radius: 4px; flex-shrink: 0; margin-top: 3px; }
+.outreach-info { display: flex; flex-direction: column; font-size: 13px; }
+.outreach-info em { font-style: normal; opacity: .7; font-size: 12px; margin-top: 2px; }
+@media (max-width: 900px) {
+  .exec-layout { grid-template-columns: 1fr; }
+  .exec-stats-card { grid-template-columns: 1fr; }
+  .exec-stat:nth-child(2) { border-right: 1px solid rgba(249,255,215,.2); }
+  .exec-stat:nth-child(3) { border-bottom: 1px solid rgba(249,255,215,.2); }
+}
+
 /* ===================== VIA PAGE (distinct branding) ===================== */
 .via-page { background: var(--via-bg); color: var(--via-text); }
 .via-page h1, .via-page h2, .via-page h3 { font-family: var(--font-via-heading); }
@@ -432,7 +474,7 @@ p { margin: 0; line-height: 1.6; }
 .cv-footer { display:flex; justify-content: space-between; padding: 24px 48px; background: var(--cv-navy); color: var(--white); grid-column: 1 / -1; }
 
 /* ===================== MORE WORK PAGE ===================== */
-.work-story { padding: var(--section-pad) 0; }
+.work-story { padding: var(--section-pad) clamp(24px, 6vw, 64px); }
 .work-story .story-head { text-align: center; max-width: 640px; margin: 0 auto 50px; }
 .work-story .story-head span { font-size: 14px; opacity: .7; }
 .mosaic { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -456,7 +498,7 @@ p { margin: 0; line-height: 1.6; }
 }
 
 
-/* ===================== Career OS Execution tab — editable dashboard table ===================== */
+/* ===================== Career OS Execution tab â editable dashboard table ===================== */
 .dashboard-table-wrap { overflow-x: auto; margin: 30px 0; border-radius: 12px; background: rgba(255,255,255,.06); }
 .dashboard-table { width: 100%; border-collapse: collapse; font-family: var(--font-body); color: var(--white); }
 .dashboard-table th, .dashboard-table td { text-align: left; padding: 12px 16px; font-size: 14px; }

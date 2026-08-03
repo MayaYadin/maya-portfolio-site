@@ -421,6 +421,9 @@ p { margin: 0; line-height: 1.6; }
 .cv-sidebar .block p { font-size: 13px; opacity: .85; margin-bottom: 10px; }
 .cv-main { background: var(--cv-bg); padding: 56px 48px; }
 .cv-main h2 { font-family: var(--font-cv-heading); font-size: 22px; margin: 34px 0 14px; }
+.cv-summary { font-size: 15px; line-height: 1.7; max-width: 640px; margin-bottom: 30px; opacity: .9; }
+.cv-sidebar .cv-title { font-size: 15px; opacity: .85; margin-bottom: 24px; }
+.cv-main .job span { font-size: 13px; opacity: .7; display: block; margin-bottom: 8px; }
 .cv-main .job h3 { font-size: 16px; margin-bottom: 6px; }
 .cv-main .job ul { margin: 10px 0 24px; }
 .cv-main .job li { font-size: 14px; line-height: 1.6; padding-left: 18px; position: relative; margin-bottom: 6px; }

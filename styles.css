@@ -172,6 +172,7 @@ p { margin: 0; line-height: 1.6; }
 .section-indigo { background: var(--indigo); color: var(--cream); }
 .section-navy { background: var(--navy); color: var(--cream); }
 .section-periwinkle { background: var(--periwinkle); color: var(--indigo); }
+.section-lavender h2, .section-indigo h1, .section-indigo h2, .section-periwinkle h2, .story-head h2 { font-weight: 400; }
 .section-blue { background: var(--blue); color: var(--cream); }
 .section-title {
     font-size: clamp(36px, 5vw, 56px);
@@ -498,7 +499,7 @@ p { margin: 0; line-height: 1.6; }
 }
 
 
-/* ===================== Career OS Execution tab Ã¢ÂÂ editable dashboard table ===================== */
+/* ===================== Career OS Execution tab ÃÂ¢ÃÂÃÂ editable dashboard table ===================== */
 .dashboard-table-wrap { overflow-x: auto; margin: 30px 0; border-radius: 12px; background: rgba(255,255,255,.06); }
 .dashboard-table { width: 100%; border-collapse: collapse; font-family: var(--font-body); color: var(--white); }
 .dashboard-table th, .dashboard-table td { text-align: left; padding: 12px 16px; font-size: 14px; }

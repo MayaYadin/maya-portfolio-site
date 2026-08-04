@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
       initCarousel();
         initNavToggle();
   initClickUnmute();
+  initMediaSound();
         });
 
         /* ---------- Scroll reveal animations ---------- */
@@ -103,6 +104,32 @@ function initClickUnmute() {
   vids.forEach(video => {
     video.addEventListener('click', () => {
       video.muted = !video.muted;
+    });
+  });
+}
+
+
+/* ---------- Content & Self-Branding: per-video mute button ---------- */
+function initMediaSound() {
+  const wraps = document.querySelectorAll('.media-item-wrap');
+  if (!wraps.length) return;
+  wraps.forEach(wrap => {
+    const video = wrap.querySelector('video.media-item');
+    const btn = wrap.querySelector('.video-sound-button');
+    if (!video || !btn) return;
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const wasMuted = video.muted;
+      document.querySelectorAll('.media-item-wrap video.media-item').forEach(v => { v.muted = true; });
+      document.querySelectorAll('.video-sound-button').forEach(b => {
+        b.innerHTML = '&#128263;';
+        b.setAttribute('aria-label', 'Unmute');
+      });
+      if (wasMuted) {
+        video.muted = false;
+        btn.innerHTML = '&#128266;';
+        btn.setAttribute('aria-label', 'Mute');
+      }
     });
   });
 }

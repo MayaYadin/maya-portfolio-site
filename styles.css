@@ -222,7 +222,7 @@ p { margin: 0; line-height: 1.6; }
 }
 .dashboard-mock { border-radius: 18px; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,.35); }
 .strategy-points > div { margin-bottom: 26px; }
-.strategy-points h3 { font-size: 20px; margin-bottom: 6px; }
+.strategy-points h3 { font-family: var(--font-body); font-size: 20px; margin-bottom: 6px; }
 .strategy-points p { font-size: 15px; opacity: .9; }
 
 /* ===================== Content & Self-Branding + VIDEO CAROUSEL ===================== */
@@ -499,7 +499,7 @@ p { margin: 0; line-height: 1.6; }
 }
 
 
-/* ===================== Career OS Execution tab ÃÂ¢ÃÂÃÂ editable dashboard table ===================== */
+/* ===================== Career OS Execution tab ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ editable dashboard table ===================== */
 .dashboard-table-wrap { overflow-x: auto; margin: 30px 0; border-radius: 12px; background: rgba(255,255,255,.06); }
 .dashboard-table { width: 100%; border-collapse: collapse; font-family: var(--font-body); color: var(--white); }
 .dashboard-table th, .dashboard-table td { text-align: left; padding: 12px 16px; font-size: 14px; }

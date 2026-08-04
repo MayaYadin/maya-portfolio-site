@@ -302,16 +302,114 @@ p { margin: 0; line-height: 1.6; }
 }
 
 /* ===================== Strategy & Systems ===================== */
-.strategy-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 56px;
-    align-items: start;
+.strategy-section {
+  position: relative;
+  width: 100%;
+  height: 660px;
+  min-height: 660px;
+  overflow: hidden;
+  background: var(--indigo);
+  color: var(--cream);
 }
-.dashboard-mock { border-radius: 18px; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,.35); }
-.strategy-points > div { margin-bottom: 26px; }
-.strategy-points h3 { font-family: var(--font-body); font-size: 20px; margin-bottom: 6px; }
-.strategy-points p { font-size: 15px; opacity: .9; }
+.strategy-systems-heading {
+  position: absolute;
+  top: 42px;
+  left: 52px;
+  z-index: 3;
+  color: var(--cream);
+}
+.strategy-visual {
+  position: absolute;
+  top: 145px;
+  left: 9.25%;
+  width: 47.7%;
+  max-width: 560px;
+  height: 446px;
+  overflow: hidden;
+  border-radius: 28px;
+}
+.strategy-visual-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+.strategy-copy {
+  position: absolute;
+  top: 158px;
+  left: 58.5%;
+  width: 35%;
+  max-width: 430px;
+}
+.strategy-copy-block {
+  margin: 0 0 18px;
+}
+.strategy-copy-block:last-of-type {
+  margin-bottom: 24px;
+}
+.strategy-copy-block h3 {
+  margin: 0 0 8px;
+  font-family: var(--font-body);
+  font-size: 25px;
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+.strategy-copy-block p {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.15;
+  font-weight: 400;
+}
+.strategy-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 255px;
+  min-height: 58px;
+  padding: 12px 16px;
+  border: 1px solid rgba(255, 254, 208, 0.75);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.16);
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-size: 19px;
+  line-height: 1;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+@media (max-width: 900px) {
+  .strategy-section {
+    height: auto;
+    min-height: auto;
+    padding: 36px 24px 52px;
+  }
+  .strategy-systems-heading,
+  .strategy-visual,
+  .strategy-copy {
+    position: relative;
+    inset: auto;
+    top: auto;
+    left: auto;
+  }
+  .strategy-systems-heading {
+    margin-bottom: 28px;
+  }
+  .strategy-visual {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    aspect-ratio: 1.25 / 1;
+    margin-bottom: 28px;
+  }
+  .strategy-copy {
+    width: 100%;
+    max-width: none;
+  }
+}
 
 /* ===================== Content & Self-Branding + VIDEO CAROUSEL ===================== */
 .content-section {
@@ -648,7 +746,7 @@ p { margin: 0; line-height: 1.6; }
 
 /* ===================== Responsive ===================== */
 @media (max-width: 900px) {
-    .product-grid, .strategy-grid, .content-grid, .work-grid,
+    .product-grid, .content-grid, .work-grid,
     .who-grid, .how-grid, .positioning-grid, .via-hero-grid { grid-template-columns: 1fr; }
     .desk-grid, .thinking-grid, .mosaic { grid-template-columns: 1fr; }
     .stat-grid { grid-template-columns: 1fr; }

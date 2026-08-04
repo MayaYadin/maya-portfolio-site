@@ -226,50 +226,118 @@ p { margin: 0; line-height: 1.6; }
 .strategy-points p { font-size: 15px; opacity: .9; }
 
 /* ===================== Content & Self-Branding + VIDEO CAROUSEL ===================== */
-.content-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-}
-.carousel-wrap {
-    position: relative;
-    height: 620px;
+.content-section {
+    height: 100vh;
+    min-height: 720px;
     overflow: hidden;
-    border-radius: 20px;
-    mask-image: linear-gradient(to bottom, transparent, black 8%, black 92%, transparent);
+    display: flex;
+    align-items: stretch;
+    padding: 0 !important;
 }
-.carousel-track {
+.content-columns {
+    display: grid;
+    grid-template-columns: minmax(420px, 42%) minmax(280px, 25.3%) minmax(280px, 25.3%);
+    column-gap: 4%;
+    width: 100%;
+    height: 100%;
+    padding-right: clamp(24px, 3.6vw, 49px);
+}
+.content-columns .content-copy {
+    padding: 40px 0 40px 54px;
+    align-self: start;
+}
+.content-columns .content-copy h2 { margin: 0; }
+.content-columns .content-copy p { margin: 55px 0 0; }
+
+.media-column {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.media-track {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 40px;
     width: 100%;
-    animation: scrollUp 32s linear infinite;
+    will-change: transform;
 }
-.carousel-wrap:hover .carousel-track { animation-play-state: paused; }
-@keyframes scrollUp {
+.carousel-up .media-track { animation: scroll-up 40s linear infinite; }
+.carousel-down .media-track { animation: scroll-down 40s linear infinite; transform: translateY(-50%); }
+@keyframes scroll-up {
     from { transform: translateY(0); }
     to   { transform: translateY(-50%); }
 }
-.carousel-item {
+@keyframes scroll-down {
+    from { transform: translateY(-50%); }
+    to   { transform: translateY(0); }
+}
+.media-column:hover .media-track { animation-play-state: paused; }
+
+.media-item-wrap {
     position: relative;
-    border-radius: 16px;
-    overflow: hidden;
-    aspect-ratio: 9 / 16;
-    background: var(--navy);
+    width: 100%;
     cursor: pointer;
 }
-.carousel-item video {
-    width: 100%; height: 100%; object-fit: cover;
+.media-item {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 0;
 }
-.carousel-item .mute-hint {
+.video-sound-button {
     position: absolute;
-    bottom: 10px; right: 10px;
+    right: 12px;
+    bottom: 12px;
+    z-index: 5;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
     background: rgba(0,0,0,.55);
     color: var(--white);
-    font-size: 11px;
-    padding: 4px 8px;
-    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity .2s ease;
+}
+.media-item-wrap:hover .video-sound-button,
+.video-sound-button:focus-visible {
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .carousel-up .media-track,
+    .carousel-down .media-track {
+        animation: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .content-section {
+        height: auto;
+        min-height: unset;
+        overflow: visible;
+    }
+    .content-columns {
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        padding-right: 0;
+    }
+    .content-columns .content-copy {
+        flex: 1 1 100%;
+        padding: 32px clamp(20px, 6vw, 40px) 24px;
+    }
+    .content-columns .content-copy p { margin-top: 20px; }
+    .media-column {
+        flex: 1 1 50%;
+        height: 70vh;
+    }
 }
 
 /* ===================== Also on my desk ===================== */

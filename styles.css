@@ -326,6 +326,7 @@ p { margin: 0; line-height: 1.6; }
     .content-columns {
         display: flex;
         flex-wrap: wrap;
+        column-gap: 0;
         height: auto;
         padding-right: 0;
     }

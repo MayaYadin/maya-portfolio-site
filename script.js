@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         initNavToggle();
   initClickUnmute();
   initMediaSound();
+initDeskCardTouch();
         });
 
         /* ---------- Scroll reveal animations ---------- */
@@ -132,4 +133,30 @@ function initMediaSound() {
       }
     });
   });
+}
+
+
+/* ---------- Also on my desk: touch-friendly flip cards ---------- */
+function initDeskCardTouch() {
+const cards = document.querySelectorAll('.desk-card');
+if (!cards.length) return;
+
+const isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+if (!isTouch) return;
+
+cards.forEach(card => {
+card.addEventListener('click', (e) => {
+if (!card.classList.contains('is-flipped')) {
+e.preventDefault();
+cards.forEach(c => { if (c !== card) c.classList.remove('is-flipped'); });
+card.classList.add('is-flipped');
+}
+});
+});
+
+document.addEventListener('click', (e) => {
+if (!e.target.closest('.desk-card')) {
+cards.forEach(c => c.classList.remove('is-flipped'));
+}
+});
 }
